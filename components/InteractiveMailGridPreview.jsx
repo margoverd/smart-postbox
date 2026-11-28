@@ -202,12 +202,19 @@ const pctDrop = (from, to) =>
 export default function InteractiveMailGridPreview() {
   const initialBoxes = useMemo(() => INITIAL_BOXES.slice(0, 30), []);
 
+  // Начальное состояние детерминировано для SSR/prerender, а рандомный день
+  // запускается в useEffect уже на клиенте.
   const [boxes, setBoxes] = useState(initialBoxes);
   const [routeBuilt, setRouteBuilt] = useState(false);
   const [dist, setDist] = useState({ base: 38.7, smart: 13.1 });
   const [fleetRoutes, setFleetRoutes] = useState(50);
   const [spin, setSpin] = useState(0);
   const [isBreakdownOpen, setIsBreakdownOpen] = useState(false);
+
+  useEffect(() => {
+    setBoxes(randomizeBoxes(initialBoxes));
+    setRouteBuilt(true);
+  }, [initialBoxes]);
 
   const fullBoxes = useMemo(
     () =>
@@ -541,7 +548,6 @@ export default function InteractiveMailGridPreview() {
               </div>
             </div>
 
-            {/* Изменен контейнер кнопок на вертикальный стек с одинаковой шириной и высотой (w-full h-12) */}
             <div className="pt-1 flex flex-col gap-2.5">
               <button
                 onClick={handleToggleRoute}

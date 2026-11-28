@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -35,7 +36,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* 2. Навигация и «Made with love» под ней */}
+          {/* 2. Навигация, почта и «Made with love» */}
           <div className="flex flex-col items-center md:items-end gap-3 pt-2">
             {/* Якорные ссылки */}
             <nav
@@ -71,8 +72,17 @@ export default function Footer() {
               </Link>
             </nav>
 
-            {/* «Made with love» прямо под меню */}
-            <div className="flex items-center gap-1.5 text-xs text-slate-400 mt-2">
+            {/* Кнопка связи по почте */}
+            <a
+              href="mailto:emptylessteam@gmail.com"
+              className="mt-1 inline-flex items-center gap-2.5 rounded-xl bg-[#101724] hover:bg-[#152032] border border-slate-700/70 hover:border-emerald-500/40 px-4 py-2.5 text-sm font-semibold text-white transition-all duration-200 shadow-xs"
+            >
+              <Mail className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span>Contact Us</span>
+            </a>
+
+            {/* «Made with love» */}
+            <div className="flex items-center gap-1.5 text-xs text-slate-400 mt-1">
               <span>Made with</span>
               <span className="text-red-500 inline-block animate-pulse">
                 ❤️

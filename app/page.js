@@ -319,10 +319,12 @@ export default function Home() {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="#demo"
+                href="https://mailbox-lemon.vercel.app/deck/index.html#1"
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center font-headline text-sm sm:text-base px-6 py-3.5 rounded-xl sm:rounded-2xl cursor-pointer transition-all duration-200 font-bold text-white bg-[#0b9b70] hover:bg-[#087a58] shadow-md shadow-[#0b9b70]/20 hover:shadow-lg active:scale-[0.98]"
               >
-                Try Live Simulation
+                View Pitch Deck
               </a>
 
               <a

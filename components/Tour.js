@@ -11,7 +11,7 @@ const STEPS = [
   {
     role: "courier",
     target: null,
-    title: "Welcome to MailGrid",
+    title: "Welcome to EmptyLess",
     text: "Smart postboxes tell us when they are full. Couriers drive only to full ones. Take a 30-second look?",
   },
   {

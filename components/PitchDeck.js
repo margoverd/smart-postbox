@@ -124,7 +124,7 @@ function Slide1() {
           className="text-[185px] leading-none font-black tracking-tight"
           style={{ color: Y }}
         >
-          MailGrid
+          EmptyLess
         </h1>
         <p className="text-[36px] leading-snug text-white/90 mt-8 font-medium">
           Каждый день фургоны Latvijas Pasts объезжают{" "}
@@ -463,7 +463,7 @@ function Slide5() {
       "Критерий",
       "Фиксированный график (Сейчас)",
       "Умные ящики с нуля",
-      "MailGrid (Наш подход)",
+      "EmptyLess (Наш подход)",
     ],
     [
       "Цена внедрения на 1 точку",
@@ -844,7 +844,7 @@ function Slide10({ onOpenDemo }) {
         style={{ background: INK }}
       >
         <div className="text-[42px] font-black text-white">
-          MailGrid: не возим воздух.{" "}
+          EmptyLess: не возим воздух.{" "}
           <span style={{ color: Y }}>Едем только туда, где нас ждут.</span>
         </div>
         <button
