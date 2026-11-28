@@ -5,7 +5,7 @@ const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 
 export const metadata = {
-  metadataBase: new URL("https://smart-postbox.vercel.app/"), // замени на свой реальный домен
+  metadataBase: new URL("https://smart-postbox.vercel.app/"), 
   title: "EmptyLess — Never Visit an Empty Mailbox Again",
   description:
     "Smart IoT sensors and dynamic routing for Latvijas Pasts to cut fuel, courier hours, and CO₂ emissions.",

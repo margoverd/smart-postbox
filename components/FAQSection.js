@@ -7,29 +7,44 @@ export function FaqSection() {
 
   const faqs = [
     {
-      question: "How does the sensor send data from inside a metal mailbox?",
+      question:
+        "Can the sensors detect vandalism, fire, or water damage inside the box?",
       answer:
-        "We use low-power wide-area networking (NB-IoT / LoRaWAN) designed to penetrate metal enclosures and dense urban buildings reliably.",
+        "In short, no. A local microcontroller checks sensor states upon activation to spot faults, and LoRa heartbeats can monitor uptime. To deter vandalism, we plan to use security screws, solid mounting, silicone sealing, and nearby cameras where available.",
     },
     {
-      question: "How long does the battery last?",
+      question:
+        "How hard is it to integrate EmptyLess with Latvijas Pasts' legacy IT systems?",
       answer:
-        "Up to 3–5 years on a single replaceable battery, thanks to ultra-low-power sleep mode between mail drop events.",
+        "We do not know the exact details of Latvijas Pasts' IT stack yet. We already have a backend structure ready and plan to launch as a standalone app first, then discuss deeper system integration.",
     },
     {
-      question: "Do couriers need to learn a new app?",
+      question:
+        "What are the main technical or operational risks of the project, and how are we addressing them?",
       answer:
-        "No. Optimized routes integrate directly into existing fleet navigation systems via API or open in standard mobile maps.",
+        "The biggest risk is vandalism, since any serviceable electronics enclosure remains a physical target. We address this with security screws, sturdy mounting, and cameras, while handling temperature swings through proper component selection and extra protection.",
     },
     {
-      question: "Is the hardware weatherproof and tamper-resistant?",
+      question: "How will the project become self-sustaining?",
       answer:
-        "Yes. Each unit is IP65-rated for Baltic winters (-30°C to +60°C) and mounts discreetly out of reach from the mail slot.",
+        "Through proven, measurable savings in fuel, time, and fleet wear. Once cost efficiency is clear for postal operations, similar tech can scale to comparable logistics or private households.",
     },
     {
-      question: "How quickly does EmptyLess pay for itself?",
+      question:
+        "What happens if a postbox has only 1 letter for a week? Won't that violate postal delivery SLAs?",
       answer:
-        "Typically within 4 to 6 months by cutting empty-box stops, fuel consumption, and courier hours by up to 65%.",
+        "Tracking fill levels does not mean ignoring low-volume boxes. EmptyLess prioritizes overflowing boxes while keeping regular pickups on track so delivery rules and SLAs are still met.",
+    },
+    {
+      question: "What is the main milestone we plan to show in 6 to 12 months?",
+      answer:
+        "A reliable, integration-ready system with a working app and backend that handles outdoor heat, cold, and weather. It will measure weight and distance, estimate fill levels, send telemetry to the app, and optimize pickup routes.",
+    },
+    {
+      question:
+        "How does the sensor distinguish between a truly full box and a single flat envelope blocking the beam?",
+      answer:
+        "Our algorithm compares current and previous weight readings. If the top sensor triggers a full alert with an unusually small weight change, the app flags a likely stuck or flat item.",
     },
   ];
 
